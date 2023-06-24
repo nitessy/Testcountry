@@ -10,8 +10,7 @@ body{
      min-height: 100vh; 
 background-color: white;
 overflow: scroll;
-    display: flex; 
-    flex-direction: column;
+    
 }
 .container{
     width: 100%;   
@@ -103,7 +102,7 @@ footer{
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
-    margin-top: auto;
+ 
 
 }
 .row{
