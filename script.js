@@ -1,10 +1,25 @@
 const countriescontainer = document.querySelector('.countries-container')
-const search = document.querySelector('.search')
+// const search = document.querySelector('.search')
+// const countryName = document.querySelectorAll('.naam')
+const search = document.querySelector('.form input')
 
 let allCountriesData 
 fetch('https://restcountries.com/v3.1/all')
  .then((res) => res.json() )
- .then((data) =>  {
+ .then((data) => {
+    renderCountries(data)
+     allCountriesData = data
+    
+ })
+ 
+    
+  
+
+
+
+  function renderCountries(data){
+    
+
     data.forEach((country) => {
        
         const countryCard = document.createElement('a')
@@ -21,17 +36,25 @@ fetch('https://restcountries.com/v3.1/all')
         
         
         countriescontainer.append(countryCard)
-            })
+            }) 
+                
+             }   
+                
 
- })
+          
+               
 
-
- 
-   
- 
-
-    
-    
-           
+              
+                search.addEventListener('input' , (e) =>{
+                 
             
-            
+            const filteredCountries = allCountriesData.filter((country) => country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
+              console.log(filteredCountries) ;
+              countriescontainer.innerHTML = ''
+              renderCountries(filteredCountries)
+                })
+
+                
+
+
+               
