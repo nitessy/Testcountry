@@ -6,18 +6,20 @@
      box-sizing: border-box; 
 }
 html{
-    height: 100%;
-     box-sizing: border-box; 
+     height: 100%; 
+     /* position: relative; */
+     /* padding-bottom: 780.36px; */
 }
 body{
-     position: relative; 
-     box-sizing: inherit; 
-
+       /* position: relative;
+      box-sizing: inherit;
+ */
+display: flex;
     width: 100%;
-     min-height: 100%; 
+     min-height: 100vh; 
+     flex-direction: column;
 background-color: white;
 overflow: scroll;
-/* padding-bottom: 6.8rem; */
 }
 .container{
     width: 100%;   
@@ -33,6 +35,8 @@ h1{
 main{
     margin: 2.7%;
     padding-bottom: 80px;
+    flex: 1;
+    /* position: absolute; */
 }
 
 
@@ -96,15 +100,12 @@ column-gap: 64px;
 .countrydetails img{
     width: 90%;
 }
-body{
-    box-sizing: unset;
-    
-}
+
 }
 
 footer{
     width: 100%;
-     position: absolute; 
+      /* position: absolute;    */
     bottom: 0;
 
     background: linear-gradient(to right, #00093c , #2d0b00);
@@ -183,6 +184,7 @@ hr{
     }
     body{
         box-sizing: unset;
+        display: unset;
         
     }
     footer{
