@@ -89,6 +89,8 @@ column-gap: 64px;
         display: block;
         max-height:unset ;
     }
+    body{
+        box-sizing: unset;
 .detailstext p{
     margin: 16px;
 }
