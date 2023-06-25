@@ -10,7 +10,7 @@ html{
      box-sizing: border-box; 
 }
 body{
-    /* position: relative; */
+     position: relative; 
      box-sizing: inherit; 
 
     width: 100%;
@@ -97,6 +97,7 @@ column-gap: 64px;
 }
 body{
     box-sizing: unset;
+    
 }
 }
 
