@@ -85,6 +85,9 @@ column-gap: 64px;
         margin-left: 10px;
         gap: 16px;
     }
+    html{
+        height:unset;
+        
     footer{
       padding: 60px 0 30px; 
     position: absolute;
