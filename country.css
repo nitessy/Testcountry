@@ -7,11 +7,11 @@
 }
 html{
     height: 100%;
-    /* box-sizing: border-box; */
+     box-sizing: border-box; 
 }
 body{
     /* position: relative; */
-    /* box-sizing: inherit; */
+     box-sizing: inherit; 
 
     width: 100%;
      min-height: 100%; 
@@ -95,7 +95,9 @@ column-gap: 64px;
 .countrydetails img{
     width: 90%;
 }
-
+body{
+    box-sizing: unset;
+}
 }
 
 footer{
