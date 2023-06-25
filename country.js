@@ -28,7 +28,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText = true`)
         nativeName.innerText = country.name.common
 
     }
-    population.innerText = country.population
+    population.innerText = `${country.population.toLocaleString('en-IN')}`
     region.innerText = country.region
     subregion.innerText = country.subregion
     capital.innerText = country.capital
@@ -39,3 +39,25 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText = true`)
 
 
 })
+
+
+
+
+const html = document.querySelector("html")
+const body = document.querySelector("body")
+const mobile_nav = document.querySelector(".button");
+const nav_header = document.querySelector(".header");
+const foot = document.querySelector(".footer")
+
+const togglenavbar = () =>{
+    nav_header.classList.toggle("active") ;
+     html.classList.toggle("active");
+    // html.style.position = "fixed";
+  
+};
+
+mobile_nav.addEventListener("click", ()=> togglenavbar());
+
+
+
+

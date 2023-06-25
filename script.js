@@ -2,9 +2,9 @@ const countriescontainer = document.querySelector('.countries-container')
 // const search = document.querySelector('.search')
 // const countryName = document.querySelectorAll('.naam')
 const search = document.querySelector('.form input')
-
-let allCountriesData 
-fetch('https://restcountries.com/v3.1/all')
+var display
+var allCountriesData 
+fetch('https://restcountries.com/v3.1/subregion/Western Europe')
  .then((res) => res.json() )
  .then((data) => {
     renderCountries(data)
@@ -42,17 +42,28 @@ fetch('https://restcountries.com/v3.1/all')
                 
 
           
+
+
+             fetch('https://restcountries.com/v3.1/all')
+             .then((res) => res.json() )
+             .then((data) => {
+                // renderCountries(data) 
+                
+              display = data} ) 
                
 
               
                 search.addEventListener('input' , (e) =>{
+                
+                 
                  
             
-            const filteredCountries = allCountriesData.filter((country) => country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
+            const filteredCountries = display.filter((country) => country.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
               console.log(filteredCountries) ;
               countriescontainer.innerHTML = ''
               renderCountries(filteredCountries)
-                })
+
+ })
 
                 
 

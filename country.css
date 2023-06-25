@@ -9,6 +9,7 @@ html{
      height: 100%; 
      /* position: relative; */
      /* padding-bottom: 780.36px; */
+     overflow-x: hidden;
 }
 body{
        /* position: relative;
@@ -16,17 +17,19 @@ body{
  */
 display: flex;
     width: 100%;
-     min-height: 100vh; 
+     min-height: 100%; 
      flex-direction: column;
 background-color: white;
-overflow: scroll;
+/* overflow: scroll; */
 }
 .container{
     width: 100%;   
-    padding: 2%;
-    margin-bottom: 30px;
+    /* padding: 2%; */
+    /* margin-bottom: 30px; */
    
 }
+
+
 
 h1{
     font-size: 35px;
@@ -40,10 +43,10 @@ main{
 }
 
 
-.container :nth-child(1){
+/* .container :nth-child(1){
     box-shadow: 0 0 5px rgba(0,0,0,0.3)
 
-}
+} */
 .back{
     padding: 7px 22px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
@@ -82,7 +85,7 @@ column-gap: 64px;
     flex-wrap: wrap;
 }
 
-@media(max-width: 800px){
+@media(max-width: 920px){
     .countrydetails{
         flex-direction: column;   
         align-items: flex-start; 
@@ -110,7 +113,7 @@ footer{
 
     background: linear-gradient(to right, #00093c , #2d0b00);
     color: white;
-    padding: 40px 0 30px;
+    padding: 40px 0 10px;
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 18px;
@@ -174,7 +177,7 @@ hr{
     text-align: center;
 }
 
-@media(max-width:700px){
+@media(max-width:920px){
     footer{
         bottom: unset;  
     }
@@ -187,11 +190,13 @@ hr{
         display: unset;
         
     }
+
+    }
     footer{
         padding: 60px 0 30px;
-        position: absolute;
+         position: absolute; 
     }
-}
+
 
 .underline{
     width: 100%;
@@ -216,10 +221,10 @@ hr{
 
 @keyframes run{
     0%{
-        left: -20px;
+        left: 0px;
     }
 100%{
-    left: 100%;
+    left: 80%;
 }
 
 
@@ -227,5 +232,187 @@ hr{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+   
+    /* background:linear-gradient(rgb(6, 15, 249),rgb(8, 46, 127),rgb(1, 1, 40)); */
+ 
+}
+
+.header{
+    padding: 0.1rem;
+    
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #00093c , #2d0b00);
+    color: white;
+    /* background-color:black; */
+     position: sticky;
+margin-bottom: 30px;
+    border:4px solid darkblue;
+}
+
+.icon{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+h2 span{
+    color: white;
+}
+
+.icon[name="close-outline"]{
+    display: none;
+}
+
+.button{
+    display: none;
+    background: transparent;
+    color: gold;
+    cursor: pointer;
+}
+.button:hover{
+    color: white;
+    transform: .5s;
+}
+
+
+.header h2{
+    font-size: 2.3rem;
+    transition: 0.8s;
+    background-image: linear-gradient(
+        to right,
+        gold 0,
+        gold 22%, 
+        gold 45%,
+        gold 50%,
+        gold 55%,
+        gold 78%,
+        gold 100%
+        );
+       color:transparent;
+       -webkit-background-clip:text;
+}*/
+
+.header h2:hover{
+    font-size: 2.4rem;
+}
+
+.list{
+    display: flex;
+    font-size: 62.5%;
+    gap: 4.8rem;
+    list-style: none;
+    background-image: linear-gradient(
+	to right,
+    
+        white,
+        white 22%, 
+        rgb(188, 179, 0) 45%,
+        rgb(237, 248, 30),
+        gold 55%,
+        gold 78%,
+        gold 100%
+	);
+    -webkit-background-clip: text;
+}
+/*.list:hover{
+    color:white;
+    scale(1.2);
+    transform: .2s;
+}*/
+
+.link:link,.link:visited{
+    display: inline-block;
+    text-transform:uppercase;
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 2rem;
+    color:transparent;
+    
+}
+
+
+
+
+@media(max-width:920px){
+    .button{
+        display: block;
+        z-index: 999;
+        border: 3px solid black;
+    }
+
+
+    .navbar{
+        width: 100%;
+        height: 100vh;
+         /* background: #041a31 ;  */
+         background: linear-gradient(to right, #00093c , #2d0b00);
+         /* color: white; */
+         /* opacity: 50%; */
+        position: absolute; 
+        top: 0;
+        left: 0;
+
+ overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.2s linear;
+        height: 100vh;
+z-index: 1;
+         opacity: 0; 
+        visibility: hidden;
+        pointer-events: none;
+
+      
+    }
+
+    .list{
+        flex-direction: column;
+        align-items:center ;
+        
+    }
+
+    .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        /* inset: 1; */
+        visibility: visible;
+        pointer-events: auto;
+          overflow-y: hidden; 
+          /* position:absolute */
+    }
+
+    .active .button .icon[name="close-outline"]{
+        display: block;
+         /* position: absolute; */
+    }
+
+    .active .button .icon[name="menu-outline"]{
+        display: none;
+    }
+    /* .active html{
+        position: fixed; */
+    }
+    
 
 
