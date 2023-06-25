@@ -86,7 +86,9 @@ column-gap: 64px;
         gap: 16px;
     }
     footer{
-      padding: 60px 0 30px;  }
+      padding: 60px 0 30px; 
+    position: absolute;
+    }
     .detailstext{
         display: block;
         max-height:unset ;
