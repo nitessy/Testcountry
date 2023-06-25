@@ -11,17 +11,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Zeyada&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-    <div class="container"> <h1> WORLD AT A GLANCE</h1>
-        <!-- <button class="toggle"><i class=" fa fa-light fa-moon"></i></button> </div> -->
+        <header class="header">
+            <h2>Web<span>Rangers</span></h2>
+            <nav class="navbar">
+                <ul class="list">
+                    <li><a class="link" href="#">Home</a></li>
+                    <li><a class="link" href="#">Countries</a></li>
+                    <li><a class="link" href="#">Weather</a></li>
+                    <li><a class="link" href="#">News</a></li>
+                    <li><a class="link" href="#">History</a></li>
+                </ul>
+            </nav>
+    
+            <div class="button">
+                <ion-icon name="menu-outline" class="icon"></ion-icon>
+                <ion-icon name="close-outline" class="icon"></ion-icon>
+            </div>
+        </header>
        
-        <!-- <DIV class="container"> 
-            <div class="form">
-                <input type="text" placeholder="search for country">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </div> </DIV>
-     -->
-    </header>
+    <div class="container"> <h1> WORLD AT A GLANCE</h1>
      <main>
         <a href="index.html" class="back"><i class="fa-solid fa-arrow-left"></i>BACK</a>
         <div class="countrydetails">
@@ -74,8 +82,11 @@
         </div>
         </div>
 <hr>
-<p class="copyright">2023 Copyright: Web Rangers|All Rights Reserved</p>
+<p class="copyright">Copyright &#169 2023: Web Rangers|All Rights Reserved</p>
      </footer>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
      <script src="country.js"></script>
 </body>
 </html>
