@@ -14,8 +14,8 @@ html{
      
 }
 body{
-       /* position: relative; */
-      /* box-sizing: inherit; */
+        position: relative; 
+       box-sizing: inherit; 
 
 
     width: 100%;
