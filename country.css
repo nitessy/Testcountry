@@ -7,29 +7,28 @@
 }
 html{
      height: 100%; 
-     /* position: relative; */
-     /* padding-bottom: 780.36px; */
+     /* width: 100%; */
+     box-sizing: border-box; 
      overflow-x: hidden;
+     /* width: fit-content; */
+     
 }
 body{
-       /* position: relative;
-      box-sizing: inherit;
- */
-display: flex;
+       /* position: relative; */
+      /* box-sizing: inherit; */
+
+
     width: 100%;
      min-height: 100%; 
-     flex-direction: column;
 background-color: white;
 /* overflow: scroll; */
 }
 .container{
     width: 100%;   
-    /* padding: 2%; */
+    padding: 1%;
     /* margin-bottom: 30px; */
    
 }
-
-
 
 h1{
     font-size: 35px;
@@ -38,19 +37,20 @@ h1{
 main{
     margin: 2.7%;
     padding-bottom: 80px;
-    flex: 1;
+    /* flex: 1; */
     /* position: absolute; */
 }
 
 
 /* .container :nth-child(1){
-    box-shadow: 0 0 5px rgba(0,0,0,0.3)
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) */
 
-} */
+
 .back{
     padding: 7px 22px;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) ;
     margin-left: 3%;
+    margin-top: 3%;
    
 }
 a{
@@ -62,7 +62,7 @@ a{
     margin-top: 60px;
     display: flex;
     align-items: center;
-     gap: 64px; 
+     gap: 44px; 
 }
 
 .countrydetails img{
@@ -80,7 +80,7 @@ a{
     display: flex;
     flex-direction: column;
     row-gap: 12px;
-column-gap: 64px;
+column-gap: 2px;
     max-height: 170px;
     flex-wrap: wrap;
 }
@@ -108,15 +108,15 @@ column-gap: 64px;
 
 footer{
     width: 100%;
-      /* position: absolute;    */
+     /* position: absolute;  */
     bottom: 0;
 
     background: linear-gradient(to right, #00093c , #2d0b00);
     color: white;
-    padding: 40px 0 10px;
+    padding: 30px 0 20px;
     border-top-left-radius: 125px;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 17px;
 
 }
 .row{
@@ -145,9 +145,9 @@ ul li{
   
     margin-bottom: 12px;
 }
-ul li a{
+ ul li a{
     text-decoration: none;
-    color: white;
+     color: white; 
 }
 .social .fa-brands{
     height: 40px;
@@ -187,16 +187,13 @@ hr{
     }
     body{
         box-sizing: unset;
-        display: unset;
         
-    }
-
     }
     footer{
         padding: 60px 0 30px;
-/*          position: absolute;  */
+        position: absolute;
     }
-
+}
 
 .underline{
     width: 100%;
@@ -221,10 +218,10 @@ hr{
 
 @keyframes run{
     0%{
-        left: 0px;
+        left: -20px;
     }
 100%{
-    left: 80%;
+    left: 100%;
 }
 
 
@@ -234,47 +231,26 @@ hr{
 
 
 
+/* Navbar */
 
 
-
-
-
-
-
-
-
-
-
-
-
-body{
-   
-    /* background:linear-gradient(rgb(6, 15, 249),rgb(8, 46, 127),rgb(1, 1, 40)); */
- 
-}
-
-.header{
-    padding: 0.1rem;
-    
-    height: 6rem;
+ .header{
+    padding: 0 2 rem;
+    height: 5.3rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:black; 
     background: linear-gradient(to right, #00093c , #2d0b00);
-    color: white;
-    /* background-color:black; */
-     position: sticky;
-margin-bottom: 30px;
-    border:4px solid darkblue;
-}
+    position: sticky;
+    border:3px solid darkblue;
+} 
+
 
 .icon{
-    width: 3.5rem;
-    height: 3.5rem;
-}
-h2 span{
-    color: white;
+    width: 3.3rem;
+    height: 3.3rem;
 }
 
 .icon[name="close-outline"]{
@@ -284,72 +260,67 @@ h2 span{
 .button{
     display: none;
     background: transparent;
-    color: gold;
+    color: white;
     cursor: pointer;
 }
-.button:hover{
-    color: white;
-    transform: .5s;
-}
-
-
 .header h2{
-    font-size: 2.3rem;
+     font-size: 1.6rem; 
+     /* margin-bottom: 70px;  */
+     margin-left: 10px;
     transition: 0.8s;
     background-image: linear-gradient(
         to right,
-        gold 0,
-        gold 22%, 
-        gold 45%,
-        gold 50%,
-        gold 55%,
-        gold 78%,
-        gold 100%
+        #b8860b 0,
+        #b8860b 22%, 
+        #b8860b 45%,
+        #b8860b 50%,
+        #b8860b 55%,
+        #b8860b 78%,
+        #b8860b 100%
         );
        color:transparent;
        -webkit-background-clip:text;
-}*/
-
-.header h2:hover{
-    font-size: 2.4rem;
 }
 
-.list{
+.header h2 span{
+    color: white;
+    font-size: 1.8rem; 
+}
+body{
+    overflow-x: hidden;
+}
+ .list{
     display: flex;
-    font-size: 62.5%;
-    gap: 4.8rem;
+    font-size: large;
+     gap: 4.1rem; 
     list-style: none;
     background-image: linear-gradient(
 	to right,
     
         white,
         white 22%, 
-        rgb(188, 179, 0) 45%,
-        rgb(237, 248, 30),
-        gold 55%,
-        gold 78%,
-        gold 100%
-	);
+        gold 45%,
+        rgb(214, 217, 31),
+        #eac117 55%,
+        #eac117 78%,
+        #eac117 100% 
+	 );
     -webkit-background-clip: text;
 }
-/*.list:hover{
+ /* .list:hover{
     color:white;
     scale(1.2);
     transform: .2s;
-}*/
+}  */
 
 .link:link,.link:visited{
     display: inline-block;
     text-transform:uppercase;
     text-decoration: none;
-    font-weight: 750;
-    font-size: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
     color:transparent;
-    
 }
-
-
-
 
 @media(max-width:920px){
     .button{
@@ -363,23 +334,20 @@ h2 span{
         width: 100%;
         height: 100vh;
          /* background: #041a31 ;  */
-         background: linear-gradient(to right, #00093c , #2d0b00);
-         /* color: white; */
-         /* opacity: 50%; */
-        position: absolute; 
+        background: linear-gradient(to right, #00093c , #2d0b00);
+        position: absolute;
         top: 0;
         left: 0;
 
- overflow-y: hidden;
+
         display: flex;
         justify-content: center;
         align-items: center;
 
         transform: translateX(100%);
         transition: all 0.2s linear;
-        height: 100vh;
-z-index: 1;
-         opacity: 0; 
+
+        opacity: 0;
         visibility: hidden;
         pointer-events: none;
 
@@ -395,24 +363,18 @@ z-index: 1;
     .active .navbar{
         transform: translateX(0);
         opacity: 1;
-        /* inset: 1; */
         visibility: visible;
         pointer-events: auto;
-          overflow-y: hidden; 
-          /* position:absolute */
     }
 
     .active .button .icon[name="close-outline"]{
         display: block;
-         /* position: absolute; */
     }
 
     .active .button .icon[name="menu-outline"]{
         display: none;
     }
-    /* .active html{
-        position: fixed; */
-    }
-    
 
 
+}
+ 
