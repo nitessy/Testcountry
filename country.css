@@ -14,17 +14,19 @@ html{
      
 }
 body{
-        position: relative; 
-       box-sizing: inherit; 
+       /* position: relative; */
+      /* box-sizing: inherit; */
 
 
     width: 100%;
      min-height: 100%; 
-background-color: white;
+/* background-color: white; */
 /* overflow: scroll; */
 }
 .container{
     width: 100%;   
+    /* position: relative;
+    min-height: 100vh; */
     padding: 1%;
     /* margin-bottom: 30px; */
    
@@ -108,9 +110,10 @@ column-gap: 2px;
 
 footer{
     width: 100%;
-      position: static;  
+      position: absolute;  
     bottom: 0;
-
+    /* z-index: 1; */
+ height: 22.75rem;
     background: linear-gradient(to right, #00093c , #2d0b00);
     color: white;
     padding: 30px 0 20px;
@@ -192,6 +195,10 @@ hr{
     footer{
         padding: 60px 0 30px;
         position: absolute;
+        height: unset;
+    }
+    #contentwrap{
+        padding-bottom: unset;
     }
 }
 
@@ -378,3 +385,10 @@ body{
 
 }
  
+#pagecontainer{
+    position: relative;
+    min-height: 100vh;
+}
+#contentwrap{
+    padding-bottom: 22.75rem;
+}
